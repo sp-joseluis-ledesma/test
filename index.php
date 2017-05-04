@@ -1,3 +1,3 @@
 <?
 
-echo "Ian mola<br/>";
+echo "Ian no mola<br/>";
