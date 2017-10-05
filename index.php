@@ -17,6 +17,6 @@ $json = json_decode($data);
 echo $json;
 /*foreach($json['item'] as $item) {
   echo $item['metadata']['name']. "<br/>";
-}*
+}*/
 
 // Cerrar el recurso cURL y liberar recursos del sistema
