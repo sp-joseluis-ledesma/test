@@ -11,10 +11,12 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Capturar la URL y pasarla al navegador
 $data = curl_exec($ch);
-$json = json_decode ( $data);
-foreach($json['item'] as $item) {
+curl_close($ch);
+
+$json = json_decode($data);
+echo $json;
+/*foreach($json['item'] as $item) {
   echo $item['metadata']['name']. "<br/>";
-}
+}*
 
 // Cerrar el recurso cURL y liberar recursos del sistema
-curl_close($ch);
