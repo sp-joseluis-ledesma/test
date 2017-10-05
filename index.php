@@ -9,7 +9,11 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 
 // Capturar la URL y pasarla al navegador
-curl_exec($ch);
+$data = curl_exec($ch);
+$json = json_decode ( $data);
+foreach($json['item'] as $item) {
+  echo $item['metadata']['name']. "<br/>";
+}
 
 // Cerrar el recurso cURL y liberar recursos del sistema
 curl_close($ch);
