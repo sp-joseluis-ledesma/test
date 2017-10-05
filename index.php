@@ -13,9 +13,9 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $data = curl_exec($ch);
 curl_close($ch);
 echo $data;
-echo $data['items'];
+$json = json_decode($data);
+echo $json['items'];
 
-//$json = json_decode($data);
 //echo $json;
 /*foreach($json['item'] as $item) {
   echo $item['metadata']['name']. "<br/>";
