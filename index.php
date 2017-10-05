@@ -1,3 +1,2 @@
 <?
-
-echo "Ian no mola<br/>";
+echo "hello <br />";
