@@ -1,2 +1,2 @@
 <?
-echo "hello hello<br />";
+echo "hello<br />";
