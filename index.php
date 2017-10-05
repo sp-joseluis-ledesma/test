@@ -12,6 +12,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 // Capturar la URL y pasarla al navegador
 $data = curl_exec($ch);
 curl_close($ch);
+echo $data;
 
 //$json = json_decode($data);
 //echo $json;
