@@ -7,6 +7,7 @@ curl_setopt($ch, CURLOPT_URL, "https://admin:qiJxHVNAmUlWGodxo99IYa38ICIvYG9a@ku
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 // Capturar la URL y pasarla al navegador
 $data = curl_exec($ch);
