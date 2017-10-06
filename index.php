@@ -15,7 +15,9 @@ curl_close($ch);
 $json = json_decode($data, true);
 
 foreach($json['items'] as $item) {
-  echo $item['metadata']['name']. "<br/>";
+  if (preg_match("sp-(.*)", $item['metadata']['name'], $matches)) {
+    echo $matches[1]. "<br/>";
+  }
 }
 
 // Cerrar el recurso cURL y liberar recursos del sistema
